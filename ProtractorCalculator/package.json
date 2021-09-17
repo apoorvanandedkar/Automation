@@ -1,0 +1,17 @@
+{
+  "name": "protractorcalculator",
+  "version": "1.0.0",
+  "description": "ProtractorDemoTests",
+  "main": "index.js",
+ 
+ "dependencies": 
+ {
+   "protractor": "7.00",
+   "jasmine": "3.7.0"
+ },
+  "scripts": {
+    "test": "protractor ./Conf/conf.js"
+  },
+  "author": "Ap",
+  "license": "ISC"
+}
