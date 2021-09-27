@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SuitePrint">
+  <test thread-count="5" name="TestPrint">
+    <classes>
+      <class name="qaclick.MavenTestProject.Abc"/>
+      <class name="qaclick.MavenTestProject.Xyz"/>
+      <class name="qaclick.MavenTestProject.TestM"/>
+      <class name="qaclick.MavenTestProject.AppTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+<suite name="OnlineVeggies">
+  <test thread-count="5" name="Test">
+    <classes>
+     
+      <class name="qaclick.MavenTestProject.TestM"/>
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
