@@ -4,6 +4,7 @@ package pageObject;
 import static org.testng.Assert.assertEquals;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -26,7 +27,12 @@ public class GreenKart extends Base
 	
 	public void addProduct() 
 	{
-		//String[] addItem = {""};
+		String[] addItem = {"Cucumber","Brocolli","Beetroot"};
+		
+//		ArrayList al = new ArrayList();
+//		al.add(0, "a");
+//		System.out.println(al.get(0));
+		
 		
 		List<WebElement> productList = driver.findElements(product);
 		System.out.println(productList.size());
@@ -34,16 +40,20 @@ public class GreenKart extends Base
 		 
 		for(int i=0; i<c;i++) 
 		{
-			String name = productList.get(i).getText();
+			String name[] = productList.get(i).getText().split("-");
+			String exactName = name[0].trim();
 			
-			if(name.equalsIgnoreCase("Brocolli - 1 Kg"))
+			
+			List itemNeeded = Arrays.asList(addItem);
+			
+			if(itemNeeded.contains(exactName))
 			{
 				driver.findElements(buttonAddToCart).get(i).click();
 			}				
 		}
 		
-		String cartCount = driver.findElement(By.xpath("//span[@class= 'cart-count']")).getText();
-		assertEquals(cartCount, "1");
+		String cartCount = driver.findElement(By.xpath("//div[@class= 'cart-info']/table/tbody/tr[1]/td[3]/strong")).getText();
+		assertEquals(cartCount, "3");
 	}
 	
 }
