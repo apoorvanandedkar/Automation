@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Automation.SeleniumFramework.Listener"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="UserManagement(failed)">
+    <classes>
+      <class name="Automation.SeleniumFramework.tests">
+        <methods>
+          <include name="Login" invocation-numbers="0"/>
+          <include name="initalizeBrowser"/>
+        </methods>
+      </class> <!-- Automation.SeleniumFramework.tests -->
+    </classes>
+  </test> <!-- UserManagement(failed) -->
+</suite> <!-- Failed suite [Suite] -->

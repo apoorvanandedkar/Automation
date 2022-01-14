@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel = "tests">
+
+  <listeners>
+   <listener class-name="Automation.SeleniumFramework.Listener"/>
+  </listeners>
+
+  <test name="SeleniumTests">
+    <classes>
+      <class name="Automation.SeleniumFramework.excelData"/>
+      <class name="Automation.SeleniumFramework.demoTests"/>
+    </classes>
+    
+  </test> <!-- Test -->
+  
+  <test name="UserManagement">
+    <classes>
+      <class name="Automation.SeleniumFramework.tests"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
